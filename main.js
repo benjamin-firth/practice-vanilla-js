@@ -21,8 +21,8 @@ const createObj = () => {
   let name = $('#climb-name').val();
   let grade = $('#climb-grade').val();
   let desc = $('#climb-description').val();
-  
   let climb = new Card(name, grade, desc);
+
   climbs.unshift(climb);
   
   addToDom();
@@ -43,10 +43,7 @@ const removeSharma = () => {
 
 const deleteCard = (e) => {
   let cardID = e.target.id;
-  let newClimbs = climbs.filter(climb => {
-    console.log(climb.id, cardID);
-    return climb.id !== parseInt(cardID);
-  })
+  let newClimbs = climbs.filter(climb => climb.id !== parseInt(cardID))
   climbs = newClimbs;
   chrisSharma();
   setTimeout(addToDom, 5350);
