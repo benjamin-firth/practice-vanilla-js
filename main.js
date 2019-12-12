@@ -8,14 +8,13 @@ const addToDom = () => {
       `<div class="card">
         <h3>Climb: ${climb.name}</h3>
         <h3>Grade: ${climb.grade}</h3>
-        <p>Description:</p>
+        <hr>
         <p>${climb.description}</p>
         <button type="button" id="${climb.id}">SENT IT!</button>
       </div>`
     )
   })
 }
-
 
 const createObj = () => {
   let name = $('#climb-name').val();
@@ -39,7 +38,6 @@ const chrisSharma = () => {
 const removeSharma = () => {
   $('#where-cards-go').html()
 }
-
 
 const deleteCard = (e) => {
   let cardID = e.target.id;
