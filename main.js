@@ -3,21 +3,17 @@ let climbs = [];
 const addToDom = () => {
   $('#where-cards-go').html('');
 
-  const giveClimbs = () => {
-    climbs.forEach(climb => {
-      $('#where-cards-go').append(`
-        <div class="card">
-          <h3>Climb: ${climb.name}</h3>
-          <h3>Grade: ${climb.grade}</h3>
-          <p>Description:</p>
-          <p>${climb.description}</p>
-          <button type="button" id="${climb.id}">SENT IT!</button>
-        </div>
-      `)
-    })
-  }
-
-  giveClimbs();
+  climbs.forEach(climb => {
+    $('#where-cards-go').append(
+      `<div class="card">
+        <h3>Climb: ${climb.name}</h3>
+        <h3>Grade: ${climb.grade}</h3>
+        <p>Description:</p>
+        <p>${climb.description}</p>
+        <button type="button" id="${climb.id}">SENT IT!</button>
+      </div>`
+    )
+  })
 }
 
 
@@ -36,6 +32,15 @@ const createObj = () => {
   $('#climb-description').val('');
 }
 
+const chrisSharma = () => {
+  $('#where-cards-go').html('<iframe src="https://giphy.com/embed/l2Je9nRbkw4uka1Z6" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/climbing-mallorca-rock-l2Je9nRbkw4uka1Z6"></a></p>')
+}
+
+const removeSharma = () => {
+  $('#where-cards-go').html()
+}
+
+
 const deleteCard = (e) => {
   let cardID = e.target.id;
   let newClimbs = climbs.filter(climb => {
@@ -43,8 +48,8 @@ const deleteCard = (e) => {
     return climb.id !== parseInt(cardID);
   })
   climbs = newClimbs;
-  console.log(climbs);
-  addToDom();
+  chrisSharma();
+  setTimeout(addToDom, 5350);
 }
 
 $('#input-info').click(createObj);
