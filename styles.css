@@ -24,8 +24,10 @@ main {
   align-items: center;
   background-color: #fabb9b;
   display: flex;
+  flex-wrap: wrap;
   grid-area: main;
   justify-content: center;
+  overflow-y: scroll;
 }
 
 body {
@@ -55,10 +57,11 @@ input {
   height: 30px;
 }
 
-#input-info {
+button {
   background-color: #FF5400;
   border-radius: 5px;
   color: #fff;
+  cursor: pointer;
   font-size: 22px;
   height: 35px;
   margin-top: 30px;
@@ -69,4 +72,17 @@ input {
   flex-direction: column;
   margin-top: 25%;
   width: 80%;
+}
+
+/* Card styling */
+
+.card {
+  background-color: #fff;
+  border: 3px solid #616161;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  margin: 30px;
+  width: 200px;
 }

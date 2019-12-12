@@ -1,6 +1,9 @@
 <!DOCTYPE html>
+  <html lang="en" dir="ltr">
+  <meta name="viewport" content="width=device-width, height=device-height">
   <head>
     <meta charset="utf-8">
+    <title>Travel Tick-List</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title></title>
     <meta name="description" content="">
@@ -14,16 +17,19 @@
     <nav>
       <form class="climb-form">
         <label>Climb Name</label>
-        <input />
+        <input id="climb-name"/>
         <label>Grade</label>
-        <input />
+        <input id="climb-grade"/>
         <label>Description</label>
-        <input />
+        <input id="climb-description"/>
         <button id="input-info" type="button">SUBMIT</button>
       </form>
     </nav>
-    <main>
+    <main id="where-cards-go">
       <h2>You haven't submitted any climbs yet!</h2>
     </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript" src="./card.js"></script>
+    <script type="text/javascript" src="./main.js"></script>
   </body>
 </html>
